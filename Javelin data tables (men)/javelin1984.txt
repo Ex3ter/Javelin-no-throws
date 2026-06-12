@@ -1,0 +1,9 @@
+	throw1	throw2	throw3	throw4	throw5	throw6
+Harkonen	NA	78.74	84.34	86.76	NA	NA
+Ottley	85.74	81.52	NA	NA	83.92	84.46
+Eldebrink	NA	80.28	NA	NA	83.72	83.30
+Gambke	82.00	82.46	NA	78.88	NA	72.08
+Yoshida	NA	81.98	NA	81.98	77.92	81.66
+Vilhjalmsson	80.44	77.66	79.22	81.58	NA	79.26
+Bradstock	70.20	81.22	78.22	76.68	NA	78.82
+Babits	NA	NA	80.68	NA	NA	NA

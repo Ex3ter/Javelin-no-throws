@@ -1,0 +1,9 @@
+	throw1	throw2	throw3	throw4	throw5	throw6
+Zelezny	89.66	NA	NA	88.18	86.28	NA
+Raty	78.50	86.60	81.44	83.22	NA	NA
+Backley	82.44	82.02	79.46	83.38	78.32	79.86
+Kinnunen	NA	82.62	NA	NA	NA	NA
+Einarsson	79.52	75.02	77.96	NA	NA	80.34
+Laukkanen	77.44	NA	74.56	76.92	79.20	78.46
+Barnett	78.64	78.58	NA	77.70	74.12	NA
+Shevchuk	77.00	NA	77.74	NA	NA	73.42

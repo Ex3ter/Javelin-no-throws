@@ -1,0 +1,9 @@
+name,throw1,throw2,throw3,throw4,throw5,throw6
+Sanderson,69.56,66.56,63.68,64.84,66.86,64.10
+Lillak,61.14,69.00,NA,NA,NA,NA
+Whitbread,64.52,65.42,NA,65.82,67.14,NA
+Laaksalo,56.42,61.36,NA,66.40,59.64,65.72
+Solberg,64.52,60.90,NA,NA,NA,NA
+Thyssen,61.12,63.26,55.64,55.96,60.42,56.26
+Peters,61.84,59.90,NA,61.24,57.98,62.34
+Smith,60.54,NA,55.92,59.14,NA,62.06

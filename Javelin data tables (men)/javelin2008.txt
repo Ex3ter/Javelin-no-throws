@@ -1,0 +1,9 @@
+	throw1	throw2	throw3	throw4	throw5	throw6
+Thorkildsen	84.72	85.91	87.93	85.13	90.57	NA
+Kovals	79.45	82.63	82.28	78.98	80.65	86.64
+Pitkamaki	83.75	NA	80.69	85.83	NA	86.16
+Jarvenpaa	83.95	NA	NA	NA	NA	83.63
+Wirkkala	NA	73.90	83.46	NA	NA	78.23
+Bannister	83.45	80.59	82.20	NA	NA	NA
+Korotkov	82.54	NA	76.84	82.15	NA	83.15
+Kazlou	82.06	77.57	74.09	NA	NA	75.36 	

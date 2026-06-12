@@ -1,0 +1,99 @@
+             throw1  throw2  throw3  throw4  throw5  throw6
+Harkonen     NA      78.74   84.34   86.76   NA      NA
+Ottley       85.74   81.52   NA      NA      83.92   84.46
+Eldebrink    NA      80.28   NA      NA      83.72   83.30
+Gambke       82.00   82.46   NA      78.88   NA      72.08
+Yoshida      NA      81.98   NA      81.98   77.92   81.66
+Vilhjalmsson 80.44   77.66   79.22   81.58   NA      79.26 	
+Bradstock    70.20   81.22   78.22   76.68   NA      78.82 		
+Babits       NA      NA      80.68   NA      NA      NA
+
+Korjus       82.74   76.26   NA      NA      NA      84.28
+Zelenzny     NA      82.32   81.60   83.46   77.88   84.12
+Raty         80.00   76.26   83.26   78.74   80.66   80.44 	
+Tafelmeier   80.14   78.72   78.28   NA      77.76   82.72
+Yevsyukov    81.42   82.32   NA      80.38   81.42   79.52 
+Weiß         80.66   81.30   79.94   77.26   77.80   78.28 
+Ovchinnikov  76.48   76.58   79.12   NA      77.32   74.64
+Wennlund     76.88   75.62   78.30   NA      76.60   NA
+
+Zelezny      89.66   NA      NA      88.18   86.28   NA
+Raty         78.50   86.60   81.44   83.22   NA      NA
+Backley      82.44   82.02   79.46   83.38   78.32   79.86 	
+Kinnunen     NA      82.62   NA      NA      NA      NA
+Einarsson    79.52   75.02   77.96   NA      NA      80.34
+Laukkanen    77.44   NA      74.56   76.92   79.20   78.46	
+Barnett      78.64   78.58   NA      77.70   74.12   NA
+Shevchuk     77.00   NA      77.74   NA      NA      73.42
+
+Zelezny      NA      88.16   82.68   83.86   86.02   86.12	
+Backley      87.44   85.66   NA      80.74   80.88   85.64
+Raty         83.44   86.66   76.52   84.52   81.70   86.98
+Hecht        83.88   86.88   NA      83.10   NA      85.10
+Henry        81.24   85.68   NA      82.58   83.94   84.08
+Makarov      82.72   85.30   81.12   NA      82.28   83.78
+Kinnunen     82.72   80.26   NA      84.02   81.98   NA
+Pukstys      78.48   80.90   83.58   81.28   82.18   81.68
+
+Zelezny      89.41   NA      90.17   NA      NA      88.97 	
+Backley      86.25   89.85   NA      80.99   NA      NA
+Makarov      88.67   85.90   NA      NA      86.67   85.30
+Hecht        87.76   NA      NA      NA      76.11   NA
+Parviainen   86.62   82.49   84.01   NA      NA      78.42
+Gatsioudis   85.06   NA      83.73   83.53   86.53   83.32 	
+Henry        82.94   80.78   83.45   NA      85.78   83.31 	
+Gonzales     76.13   78.55   83.33   NA      NA      77.19
+
+Thorkildsen  84.82   86.50   80.96   NA     NA      NA
+Vasilevskis  84.95   83.95   NA      NA     79.07   80.91
+Makarov      84.84   NA      77.59   78.00  82.51   84.32
+Backley      79.62   81.48   84.13   83.02  NA      81.62
+Ivanov       83.31   82.76   81.36   80.28  78.07   79.99
+Varnik       83.25   82.72   NA      NA     76.41   NA
+Rags         77.13   83.14   81.69   NA     NA      78.63
+Pitkamaki    80.38   83.01   NA      NA     81.19   NA
+
+Thorkildsen  84.72   85.91   87.93   85.13  90.57   NA
+Kovals       79.45   82.63   82.28   78.98  80.65   86.64 	
+Pitkamaki    83.75   NA      80.69   85.83  NA      86.16 	
+Jarvenpaa    83.95   NA      NA      NA     NA      83.63 	
+Wirkkala     NA      73.90   83.46   NA     NA      78.23 	
+Bannister    83.45   80.59   82.20   NA     NA      NA
+Korotkov     82.54   NA      76.84   82.15  NA      83.15 	
+Kazlou       82.06   77.57   74.09   NA     NA      75.36 	
+
+Walcott      83.51   84.58   NA      80.64  NA      NA
+Ruuskanen    79.60   81.09   81.60   81.97  84.12   79.88
+Vesely       NA      81.69   81.80   NA     80.32   83.34 	
+Pitkamaki    77.33   82.68   80.67   80.46  82.80   82.53
+Thorkildsen  NA      82.63   NA      81.70  NA      NA
+Lebesis      81.21   81.91   81.27   80.36  NA      79.45
+Haber        76.99   74.33   81.21   79.95  76.36   75.85
+Farquhar     76.80   76.64   80.22   NA     NA      NA
+
+Rohler       87.40   85.61   87.07   84.84  90.30   NA
+Yego         88.24   NA      NA      NA     NA      NA
+Walcott      83.45   85.38   83.38   80.33  NA      NA	
+Vetter       85.32   NA      82.54   NA     83.61   81.74
+Kosynskyy    82.51   83.95   83.64   81.61  81.21   NA
+Ruuskanen    NA      77.81   83.05   NA     NA      80.00
+Vesely       78.20   82.51   NA      NA     NA      78.63 	
+Vadlejch     80.02   82.42   81.59   80.32  NA      NA
+
+Chopra       87.03   87.58   76.79   NA     NA      84.24
+Vadlejch     83.98   NA      NA      82.86  86.67   NA
+Vesely       79.73   80.30   85.44   NA     84.98   NA
+Weber        85.30   77.90   78.00   83.10  85.15   75.72
+Nadeem       82.40   NA      84.62   82.91  81.98   NA
+Katkavets    82.49   81.03   83.71   79.24  NA      NA
+Mardare      81.16   81.73   82.84   81.90  83.30   81.09
+Etelatalo    78.43   76.59   83.28   79.20  79.99   83.05
+
+Nadeem       NA      92.97   88.72   79.40  84.87   91.79
+Chopra       NA      89.45   NA      NA     NA      NA
+Peters       84.70   87.87   NA      88.54  87.38   81.83
+Vadlejch     80.15   84.52   88.50   NA     84.98   83.27
+Yego         80.29   87.72   NA      84.90  83.20   81.58
+Weber        NA      87.33   NA      86.85  87.40   84.09
+Walcott      86.16   NA      82.89   78.96  76.86   NA
+Etelatalo    78.81   77.60   84.58   82.02  NA      81.69 	
