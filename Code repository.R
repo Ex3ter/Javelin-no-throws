@@ -176,3 +176,73 @@ fours<-c(8.2377940,0.2262742,0.6576093)
 
 leveneTest(throw_sd~max_no_throws)
 #Doesn't work because of different object lengths and "quantitative explanatory variables"
+
+
+
+#Reanalyse for new data
+javelinmaster_women
+
+no_throws=rowSums(is.na(javelinmaster_women))
+plot(no_throws, xlab="Placement", ylab="No-Throws")
+javelinmaster_women_numbers<-javelinmaster_women[,-1]
+javelinmaster_women_numbers<-javelinmaster_women_numbers[,-7]
+final_scores=apply(javelinmaster_women_numbers,1,max,na.rm=TRUE)
+plot(final_scores,no_throws)
+abline(mod<-lm(no_throws~final_scores))
+summary(mod)
+#A value of -0.036 with a p-value of 0.497.  Nothing of note.
+
+shot_put
+
+no_throws=rowSums(is.na(shot_put))
+plot(no_throws, xlab="Placement", ylab="No-Throws")
+shot_put_numbers<-shot_put[,-1]
+shot_put_numbers<-shot_put_numbers[,-7]
+final_scores=apply(shot_put_numbers,1,max,na.rm=TRUE)
+plot(final_scores,no_throws)
+abline(mod<-lm(no_throws~final_scores))
+summary(mod)
+#Interesting.  A value of -0.48 with a p-value of 0.016.  Very interesting.
+
+discus
+
+no_throws=rowSums(is.na(discus))
+plot(no_throws, xlab="Placement", ylab="No-Throws")
+discus_numbers<-discus[,-1]
+discus_numbers<-discus_numbers[,-7]
+final_scores=apply(discus_numbers,1,max,na.rm=TRUE)
+plot(final_scores,no_throws)
+abline(mod<-lm(no_throws~final_scores))
+summary(mod)
+#A value of -0.074 at a p-value of 0.227.  Nothing of note.
+
+
+
+#Continue looking into shot-put
+
+#Sums of totals of number of no-throws
+plot(table(rowSums(is.na(shot_put_numbers))))
+
+#Overall no-throw rate
+o<-c(13,23,24,13,9,3,0)
+o*(0:6)
+sum(o*(0:6))
+11*48
+161/528
+#Interesting.  Identical no-throw rate.
+
+#Is this statistically significant?
+#Null there are 0 intentional no-throws
+phat<-161/1056
+(161/528)/phat*(1-phat)*(1/264)
+
+
+#Are no-throws binomially distributed?
+e<-dbinom(0:6,6,161/528)*sum(o)
+sum((o-e)^2/e)
+pchisq(9.69711,df=5,lower.tail=F)
+
+#Plot observed no-throws against expected
+plot(o,e,xlab="Observed",ylab="Expected",asp=1)
+abline(mod<-lm(o~e))
+summary(mod)
