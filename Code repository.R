@@ -200,7 +200,7 @@ shot_put_numbers<-shot_put[,-1]
 shot_put_numbers<-shot_put_numbers[,-7]
 final_scores=apply(shot_put_numbers,1,max,na.rm=TRUE)
 plot(final_scores,no_throws)
-abline(mod<-lm(no_throws~final_scores))
+abline(mod<-lm(final_scores~no_throws))
 summary(mod)
 #Interesting.  A value of -0.48 with a p-value of 0.016.  Very interesting.
 
@@ -211,12 +211,12 @@ plot(no_throws, xlab="Placement", ylab="No-Throws")
 discus_numbers<-discus[,-1]
 discus_numbers<-discus_numbers[,-7]
 final_scores=apply(discus_numbers,1,max,na.rm=TRUE)
-plot(final_scores,no_throws)
-abline(mod<-lm(no_throws~final_scores))
+plot(no_throws,final_scores)
+abline(mod<-lm(final_scores~no_throws))
 summary(mod)
 #A value of -0.074 at a p-value of 0.227.  Nothing of note.
 
-
+boxplot(final_scores~no_throws)
 
 #Continue looking into shot-put
 
@@ -246,3 +246,32 @@ pchisq(9.69711,df=5,lower.tail=F)
 plot(o,e,xlab="Observed",ylab="Expected",asp=1)
 abline(mod<-lm(o~e))
 summary(mod)
+
+#Does this hold for women?
+no_throws=rowSums(is.na(shot_put.women))
+plot(no_throws, xlab="Placement", ylab="No-Throws")
+shot_put.women_numbers<-shot_put.women[,-1]
+shot_put.women_numbers<-shot_put.women_numbers[,-7]
+final_scores=apply(shot_put.women_numbers,1,max,na.rm=TRUE)
+plot(no_throws,final_scores)
+abline(mod<-lm(final_scores~no_throws))
+summary(mod)
+
+plot(no_throws,final_scores)
+abline(mod<-lm(final_scores~no_throws))
+summary(mod)
+
+#Compare the variances of each no throw category
+zeroes_shot=c(22.93,22.65,22.52,21.09,20.51,20.49,20.48,22.49,21.99,20.57,20.36,21.26,20.93)
+#var=0.9389436
+ones_shot=c(22.18,21.41,21.36,21.2,20.64,21.89,21.23,20.84,21.51,20.84,20.55,20.32,21.62,20.74,20.45,20.39,20.94,20.91,22.39,21.4,20.38,21.09,20.97,19.98)
+#var=0.3600897
+twos_shot=c(22.03,21.15,20.88,21.88,21,20.73,21.02,21.19,20.93,20.71,20.63,21.07,21.29,21.21,21.2,20.87,20.84,20.79,20.75,20.07,21.7,20.96,20.32)
+#var=0.197568
+threes_shot=c(22.9,22.15,21.42,21.78,21.86,20.69,21.04,20.53,20.6,20.34,20.26,20.18,20.28)
+#var=0.7523244
+fours_shot=c(22.15,21.7,20.89,20.72,20.64,20.31,20.23,20.36,19.81)
+#var=0.5493
+fives_shot=c(20.42,21.16,19.65)
+#var=0.5701
+var.test(zeroes_shot,twos_shot,alternative="two.sided")
