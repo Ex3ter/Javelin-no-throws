@@ -204,6 +204,9 @@ abline(mod<-lm(final_scores~no_throws))
 summary(mod)
 #Interesting.  A value of -0.48 with a p-value of 0.016.  Very interesting.
 
+boxplot(final_scores~no_throws)
+
+
 discus
 
 no_throws=rowSums(is.na(discus))
@@ -216,7 +219,19 @@ abline(mod<-lm(final_scores~no_throws))
 summary(mod)
 #A value of -0.074 at a p-value of 0.227.  Nothing of note.
 
-boxplot(final_scores~no_throws)
+long.jump
+
+no_throws=rowSums(is.na(long.jump))
+plot(no_throws, xlab="Placement", ylab="No-Throws")
+long.jump_numbers<-long.jump[,-1]
+long.jump_numbers<-long.jump_numbers[,-7]
+final_scores=apply(long.jump_numbers,1,max,na.rm=TRUE)
+plot(no_throws,final_scores)
+abline(mod<-lm(final_scores~no_throws))
+summary(mod)
+#A value of -0.0017 at a p-value of 0.905.  Nothing of note.
+
+
 
 #Continue looking into shot-put
 
@@ -275,3 +290,65 @@ fours_shot=c(22.15,21.7,20.89,20.72,20.64,20.31,20.23,20.36,19.81)
 fives_shot=c(20.42,21.16,19.65)
 #var=0.5701
 var.test(zeroes_shot,twos_shot,alternative="two.sided")
+
+
+#Get max value of each athlete
+final_scores_shot=apply(shot_put_numbers,1,max,na.rm=TRUE)
+max_throw_number_shot<-c(1:85)
+
+#Check distribution of best throws (earlier or later?)
+for (i in 1:85){
+  temp<-match(final_scores_shot[i],shot_put_numbers[i,])
+  max_throw_number_shot[i]<-temp
+}
+maxes_shot<-data.frame(final_scores_shot,max_throw_number_shot,no_throws)
+
+hist(max_throw_number_shot)
+
+#Are max throws uniformly distributed?
+o<-c(13,23,24,13,9,3)
+chisq.test(o)
+
+
+#Order by number of appearances and alphabetically for ease of use
+shot_put_ordered
+#Use Fisher test to check if certainly players have a higher foul rate
+#Fisher tests number of no throws.  Rewrite data.
+ordered_throws<-data.frame(shot_put_ordered$name,shot_put_ordered$no_throws)
+mean(ordered_throws$shot_put_ordered.no_throws)
+#1.894118
+#Start with Crouser
+fisher.test(matrix(c(3,0,0,1.894118,1.894118,1.894118),nrow=2),alternative = "lower")
+#Nothing
+#Gunthor?
+fisher.test(matrix(c(1,0,3,1.894118,1.894118,1.894118),nrow=2),alternative = "lower")
+#Kovacs
+fisher.test(matrix(c(3,0,3,1.894118,1.894118,1.894118),nrow=2),alternative = "higher")
+#Majewski
+fisher.test(matrix(c(4,1,1,1.894118,1.894118,1.894118),nrow=2),alternative = "higher")
+#Andrei
+fisher.test(matrix(c(0,0,1.894118,1.894118),nrow=2))
+#Armstrong
+fisher.test(matrix(c(2,3,1.894118,1.894118),nrow=2))
+#Barnes
+fisher.test(matrix(c(1,1,1.894118,1.894118),nrow=2))
+#Buder
+fisher.test(matrix(c(3,0,1.894118,1.894118),nrow=2))
+#Cantwell
+fisher.test(matrix(c(2,0,1.894118,1.894118),nrow=2))
+#Godina
+fisher.test(matrix(c(2,2,1.894118,1.894118),nrow=2))
+#Hoffa
+fisher.test(matrix(c(1,3,1.894118,1.894118),nrow=2))
+#Nelson
+fisher.test(matrix(c(5,2,1.894118,1.894118),nrow=2))
+#Peric
+fisher.test(matrix(c(2,2,1.894118,1.894118),nrow=2))
+#Romani
+fisher.test(matrix(c(2,2,1.894118,1.894118),nrow=2))
+#Storl
+fisher.test(matrix(c(2,3,1.894118,1.894118),nrow=2))
+#Timmerman
+fisher.test(matrix(c(0,0,1.894118,1.894118),nrow=2))
+#Walsh
+fisher.test(matrix(c(1,1,1.894118,1.894118),nrow=2))
