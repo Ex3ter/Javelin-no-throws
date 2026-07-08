@@ -352,3 +352,46 @@ fisher.test(matrix(c(2,3,1.894118,1.894118),nrow=2))
 fisher.test(matrix(c(0,0,1.894118,1.894118),nrow=2))
 #Walsh
 fisher.test(matrix(c(1,1,1.894118,1.894118),nrow=2))
+
+#Get mean and sd of each sport
+jmax=apply(javelinmaster_numbers,1,max,na.rm=TRUE)
+mean(jmax)
+#84.59386
+sd(jmax)
+#2.985811
+dmax=apply(discus_numbers,1,max,na.rm=TRUE)
+mean(dmax)
+#66.01644
+sd(dmax)
+#2.019403
+lmax=apply(long.jump_numbers,1,max,na.rm=TRUE)
+mean(lmax)
+#8.198161
+sd(lmax)
+#0.1895069
+smax=apply(shot_put_numbers,1,max,na.rm=TRUE)
+mean(smax)
+#21.05212
+sd(smax)
+#0.7267198
+
+#Javelin
+A<-replicate(1000000,max(rnorm(6,mean=84.59386,sd=2.985811)))
+B<-replicate(1000000,max(rnorm(5,mean=84.59386,sd=3.27)))
+table(A>B)
+#Increase by 0.284
+#Discus
+A<-replicate(1000000,max(rnorm(6,mean=66.01644,sd=2.019403)))
+B<-replicate(1000000,max(rnorm(5,mean=66.01644,sd=2.21)))
+table(A>B)
+#Increase by 0.191
+#Long jump
+A<-replicate(1000000,max(rnorm(6,mean=8.198161,sd=0.1895069)))
+B<-replicate(1000000,max(rnorm(5,mean=8.198161,sd=0.2075)))
+table(A>B)
+#Increase by 0.018
+#Shot put
+A<-replicate(1000000,max(rnorm(6,mean=21.05212,sd=0.7267198)))
+B<-replicate(1000000,max(rnorm(5,mean=21.05212,sd=0.795)))
+table(A>B)
+#Increase by 0.0683
