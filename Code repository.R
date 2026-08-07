@@ -18,15 +18,15 @@ table(replicate(1e6,max(rnorm(6))>max(rnorm(1))))
 no_throws=rowSums(is.na(javelin_table))
 plot(no_throws, xlab="Placement", ylab="No-Throws")
 placements=1:8
-abline(lm(no_throws~placements))
-summary(lm(no_throws~placements))
+abline(glm(no_throws~placements))
+summary(glm(no_throws~placements))
 
 #Get max value of each athlete
 final_scores=apply(javelin_table,1,max,na.rm=TRUE)
 
 #Final score against number of no-throws
-plot(final_scores,no_throws)
-abline(mod<-lm(no_throws~final_scores))
+plot(no_throws,final_scores)
+abline(mod<-glm(final_scores~no_throws))
 summary(mod)
 
 #Chi-square test for no-throw sequential independence, removing athletes that didn't no-throw
@@ -73,8 +73,8 @@ plot(no_throws, xlab="Placement", ylab="No-Throws")
 final_scores=apply(javelinmaster_numbers,1,max,na.rm=TRUE)
 
 #Final score against number of no-throws
-plot(final_scores,no_throws)
-abline(mod<-lm(no_throws~final_scores))
+plot(no_throws,final_scores)
+abline(mod<-glm(final_scores~no_throws))
 summary(mod)
 
 #Check distribution of best throws (earlier or later?)
@@ -85,6 +85,11 @@ for (i in 1:88){
 maxes<-data.frame(final_scores,max_throw_number,no_throws)
 
 hist(max_throw_number)
+hist(table(max_throw_number))
+#Alright, fine, I'll find another way
+data_temp<-data.frame(Max_throw_number=c("1","2","3","4","5","6"),Frequency=c(18,26,19,5,11,9))
+ggplot(data_temp,aes(x=Max_throw_number,y=Frequency))+geom_bar(stat = "identity")
+#Better
 
 #Are max throws uniformly distributed?
 o<-c(18,26,19,5,11,9)
@@ -188,7 +193,7 @@ javelinmaster_women_numbers<-javelinmaster_women[,-1]
 javelinmaster_women_numbers<-javelinmaster_women_numbers[,-7]
 final_scores=apply(javelinmaster_women_numbers,1,max,na.rm=TRUE)
 plot(final_scores,no_throws)
-abline(mod<-lm(no_throws~final_scores))
+abline(mod<-glm(no_throws~final_scores))
 summary(mod)
 #A value of -0.036 with a p-value of 0.497.  Nothing of note.
 
@@ -200,7 +205,7 @@ shot_put_numbers<-shot_put[,-1]
 shot_put_numbers<-shot_put_numbers[,-7]
 final_scores=apply(shot_put_numbers,1,max,na.rm=TRUE)
 plot(final_scores,no_throws)
-abline(mod<-lm(final_scores~no_throws))
+abline(mod<-glm(final_scores~no_throws))
 summary(mod)
 #Interesting.  A value of -0.48 with a p-value of 0.016.  Very interesting.
 
@@ -215,7 +220,7 @@ discus_numbers<-discus[,-1]
 discus_numbers<-discus_numbers[,-7]
 final_scores=apply(discus_numbers,1,max,na.rm=TRUE)
 plot(no_throws,final_scores)
-abline(mod<-lm(final_scores~no_throws))
+abline(mod<-glm(final_scores~no_throws))
 summary(mod)
 #A value of -0.074 at a p-value of 0.227.  Nothing of note.
 
@@ -227,7 +232,7 @@ long.jump_numbers<-long.jump[,-1]
 long.jump_numbers<-long.jump_numbers[,-7]
 final_scores=apply(long.jump_numbers,1,max,na.rm=TRUE)
 plot(no_throws,final_scores)
-abline(mod<-lm(final_scores~no_throws))
+abline(mod<-glm(final_scores~no_throws))
 summary(mod)
 #A value of -0.0017 at a p-value of 0.905.  Nothing of note.
 
@@ -259,7 +264,7 @@ pchisq(9.69711,df=5,lower.tail=F)
 
 #Plot observed no-throws against expected
 plot(o,e,xlab="Observed",ylab="Expected",asp=1)
-abline(mod<-lm(o~e))
+abline(mod<-glm(o~e))
 summary(mod)
 
 #Does this hold for women?
@@ -269,11 +274,11 @@ shot_put.women_numbers<-shot_put.women[,-1]
 shot_put.women_numbers<-shot_put.women_numbers[,-7]
 final_scores=apply(shot_put.women_numbers,1,max,na.rm=TRUE)
 plot(no_throws,final_scores)
-abline(mod<-lm(final_scores~no_throws))
+abline(mod<-glm(final_scores~no_throws))
 summary(mod)
 
 plot(no_throws,final_scores)
-abline(mod<-lm(final_scores~no_throws))
+abline(mod<-glm(final_scores~no_throws))
 summary(mod)
 
 #Compare the variances of each no throw category
