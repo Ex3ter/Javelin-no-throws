@@ -443,3 +443,7 @@ women_sd_3<-c(0.24097026,0.10338708,0.16739839,0.19905332,0.75113248,0.35928942,
 mean(women_sd_3)
 women_sd_4<-c(0.235,0.055,0.115,0.38,0.08,0.04)
 mean(women_sd_4)
+
+#T-test for difference between standard deviations
+(0.4190669-0.15875)/sqrt(((0.201095**2)/23)+((0.09905806**2)/8))
+#p-value of 0.000049
